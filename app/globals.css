@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 128;
+  --background-end-rgb: 0, 0, 64;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--background-start-rgb), 0.85),
+    rgba(var(--background-end-rgb), 0.85)
+  ),
+  url('https://i.ibb.co/K27nFtg/1736158471218.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+  animation-delay: 2s;
+  z-index: -1;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
